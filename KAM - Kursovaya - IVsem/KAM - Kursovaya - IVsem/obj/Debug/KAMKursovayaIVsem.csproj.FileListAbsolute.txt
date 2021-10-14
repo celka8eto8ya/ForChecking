@@ -1,0 +1,16 @@
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\bin\Debug\KAM - Kursovaya - IVsem.exe.config
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\bin\Debug\KAM - Kursovaya - IVsem.exe
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\bin\Debug\KAM - Kursovaya - IVsem.pdb
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAMKursovayaIVsem.csprojAssemblyReference.cache
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAM___Kursovaya___IVsem.Form1.resources
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAM___Kursovaya___IVsem.Properties.Resources.resources
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAMKursovayaIVsem.csproj.GenerateResource.cache
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAMKursovayaIVsem.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAM - Kursovaya - IVsem.exe
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAM - Kursovaya - IVsem.pdb
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAM___Kursovaya___IVsem.Form2.resources
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAM___Kursovaya___IVsem.Form3.resources
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\bin\Debug\MySql.Data.dll
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\bin\Debug\Google.Protobuf.dll
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\bin\Debug\MySql.Data.xml
+C:\Users\Андрей\source\repos\KAM - Kursovaya - IVsem\KAM - Kursovaya - IVsem\obj\Debug\KAMKursovayaIVsem.csproj.CopyComplete
