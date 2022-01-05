@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+
+  /* background-color: rgb(68, 68, 75); */
+}
+html,
+body {
+  height: 100%;
+}
+
+.header {
+  top: 0px;
+  width: 100%;
+  height: 76px;
+  background-color: rgba(63, 63, 83, 0.76);
+  backdrop-filter: blur(2px);
+
+  position: fixed;
+  z-index: 20;
+}
+.main {
+  background-color: rgb(80, 62, 78);
+  padding-top: 76px;
+  padding-bottom: 15px;
+  /* position: relative; */
+}
+.header.active {
+  background-color: rgb(218, 209, 209);
+}
+.main.active {
+  background-color: rgb(214, 167, 216);
+  /* position: relative; */
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 15px;
+  /* background-color: rgb(68, 68, 75, 0.95); */
+  /* background-color: darkorchid; */
+}
+/* .main_body {
+  overflow: scroll;
+} */
+.header_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header_list ul {
+  display: flex;
+  flex-direction: row;
+}
+.header_list li {
+  margin-left: 20px;
+  list-style: none;
+}
+.header_list li > a {
+  /* line-height: 2.85; */
+  /* font-family: "CLEANVEB"; */
+
+  /* font-family: "DeutschGothic"; */
+  /* font-family: "Gagalin"; */
+  /* font-family: "beerMoney"; */
+  line-height: 43px;
+  font-family: "MuseoSansCyrl";
+  font-size: 19px;
+  /* font-family: "CLEANVEL";
+  font-weight: bold; */
+}
+
+.header_logo {
+  display: flex;
+  flex-direction: row;
+  /* width: 50px; */
+}
+
+.header_logo_img img {
+  /* width: 10%; */
+  background-color: rgb(201, 169, 159);
+  border-radius: 50%;
+  width: 51px;
+}
+.header a {
+  color: rgb(206, 143, 206);
+  text-decoration: none;
+  transition: 0.3s all linear;
+}
+.header li > a {
+  margin-left: 10px;
+  transition: 0.3s all linear;
+}
+.header a.Picked {
+  color: rgb(240, 227, 240);
+}
+.header li > a:hover {
+  background-color: rgb(240, 227, 240);
+  color: rgb(40, 40, 43);
+  border-radius: 2%;
+  color: rgb(206, 143, 206);
+  background-color: rgb(206, 143, 206);
+  color: rgb(240, 227, 240);
+}
+.header_logo_text:hover {
+  color: rgb(240, 227, 240);
+}
+.header_logo_text {
+  margin-left: 20px;
+  display: block;
+  width: 70%;
+  /* line-height: 2.35; */
+  /* font-family: "CLEANVEB"; */
+  /* font-family: "CLEANVEL"; */
+  /* font-family: "DeutschGothic"; */
+  /* font-family: "Gagalin"; */
+  line-height: 43px;
+  font-family: "beerMoney";
+  font-weight: normal;
+  /* font-family: "MuseoSansCyrl"; */
+  font-size: 26px;
+}
+
+.changeTheme {
+  display: block;
+  /* line-height: 2.2; */
+  margin-top: 4px;
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-color: rgb(203, 176, 228);
+  border-radius: 10%;
+  background-image: url("https://img.icons8.com/ios/100/000000/day-and-night.png");
+  /* background-image: url("https://cdn-icons-png.flaticon.com/512/5115/5115349.png"); */
+}
+
+.category_article {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  /* line-height: 2.35; */
+  /* font-family: "CLEANVEB"; */
+  /* font-family: "CLEANVEL"; */
+  font-weight: bold;
+  font-family: "DeutschGothic";
+  /* font-family: "Gagalin"; */
+  /* font-family: "beerMoney"; */
+  color: rgb(240, 234, 234);
+}
+.main_article {
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.article_element {
+  flex: 0 1 31%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* height: 300px; */
+  display: block;
+  border: solid 3px rgb(240, 240, 240);
+  border-radius: 15%;
+  overflow: hidden;
+  position: relative;
+  /* background-color: cadetblue; */
+}
+
+.article_element_background {
+  overflow: hidden;
+  height: 300px;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+.article_element_background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15%;
+}
+
+.article_element_background:hover {
+  /* width: 115%;
+  height: 115%; */
+  transform: scale(1.2);
+}
+.article_element_background:hover::after {
+  content: attr(data-title); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0;
+  right: 0;
+  bottom: 36px; /* Положение подсказки */
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  background: rgba(81, 82, 85, 0.9); /* Полупрозрачный цвет фона */
+  text-align: center; /* Выравнивание текста по центру */
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+  font-size: 11px; /* Размер текста подсказки */
+  padding: 30px 10px; /* Поля */
+  border: 1.5px solid rgb(253, 253, 253); /* Параметры рамки */
+}
+.article_element_name {
+  position: absolute;
+  margin-top: -50px;
+  color: rgb(255, 255, 255);
+
+  font-size: 24px;
+  font-family: "CLEANVEB";
+
+  padding-left: 10%;
+  /* font-family: "CLEANVEL"; */
+  font-weight: bold;
+  /* font-family: "DeutschGothic"; */
+  /* font-family: "Gagalin"; */
+  /* font-family: "beerMoney"; */
+}
+.article_element_date {
+  display: block;
+  font-size: 20px;
+  margin-top: -80px;
+}
+
+.footer {
+  height: 33%;
+  background-color: rgb(63, 47, 70);
+}
+.footer_body {
+  display: block;
+  margin: 0px auto;
+}
+.wrapper_socialMedia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding: 0 20%; */
+  margin: 35px auto;
+}
+.socialMedia_element {
+  display: block;
+  margin-right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: rgb(105, 89, 101);
+  opacity: 0.8;
+  transition: 0.15s all linear;
+}
+.socialMedia_element img {
+  display: block;
+  margin: 7px auto;
+  /* border-radius: 15%; */
+  /* width: 35px;
+  height: 35px; */
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+}
+.socialMedia_element:hover {
+  background-color: rgb(206, 143, 206);
+  opacity: 0.95;
+}
+.fotter_rights {
+  text-align: center;
+  color: rgb(206, 143, 206);
+  line-height: 20px;
+  font-family: "MuseoSansCyrl";
+  font-size: 15px;
+}
+.fotter_rights span {
+  text-align: center;
+  color: rgb(221, 214, 221);
+  font-family: "beerMoney";
+}
+
+.footer_separate {
+  background-color: blue;
+  margin-bottom: 8px;
+}
+
+/*#region Main sheet for adaptive*/
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+    /* background-color: blueviolet; */
+  }
+  .article_element {
+    flex: 0 1 48%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    /* background-color: burlywood; */
+  }
+  .article_element {
+    flex: 0 1 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+    /* background-color: rgb(126, 150, 134); */
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .header_logo_text {
+    /* visibility: hidden; */
+    transform: scale(0);
+  }
+
+  .header_list {
+    /* position: absolute; */
+
+    position: fixed;
+    margin-top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 75);
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+  }
+  .header_list ul {
+    position: absolute;
+    flex-direction: column;
+    top: 80px;
+    left: 40px;
+  }
+  .header_logo_img img,
+  .header_logo_img {
+    /* display: block; */
+    position: relative;
+    z-index: 11;
+  }
+  .menu_burger {
+    margin-top: 7px;
+    margin-right: 20px;
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 29px;
+    z-index: 10;
+    /* background-color: chartreuse; */
+  }
+  .menu_burger span {
+    display: block;
+    position: absolute;
+    /* z-index: 3; */
+    top: 13px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(203, 176, 228);
+    transition: all 0.3s ease 0s;
+  }
+  .menu_burger:before,
+  .menu_burger:after {
+    display: block;
+    content: "";
+    position: absolute;
+    /* z-index: 3; */
+    /* top: 9px; */
+    width: 100%;
+    height: 3px;
+    background-color: rgb(203, 176, 228);
+    transition: all 0.3s ease 0s;
+  }
+  .menu_burger.active span {
+    transform: scale(0);
+  }
+  .menu_burger:before {
+    top: 0px;
+  }
+  .menu_burger:after {
+    bottom: 0px;
+  }
+
+  .menu_burger.active:before {
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .menu_burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 13px;
+  }
+
+  .header_list.active {
+    margin-top: 0px;
+    top: 0;
+    height: 850px;
+    overflow: unset;
+  }
+
+  .main_body {
+    z-index: 1;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper_socialMedia {
+    margin: 15px auto;
+  }
+  .footer {
+    height: 25%;
+  }
+  .socialMedia_element {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}

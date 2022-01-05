@@ -1,0 +1,539 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+
+  /* background-color: rgb(68, 68, 75); */
+}
+html,
+body {
+  height: 100%;
+}
+/*#region HEADER*/
+.header {
+  top: 0px;
+  width: 100%;
+  height: 76px;
+  background-color: rgba(63, 63, 83, 0.76);
+  backdrop-filter: blur(2px);
+
+  position: fixed;
+  z-index: 20;
+}
+.main {
+  background-color: rgb(80, 62, 78);
+  padding-top: 76px;
+  padding-bottom: 15px;
+  /* position: relative; */
+}
+.header.active {
+  background-color: rgb(218, 209, 209);
+}
+.main.active {
+  background-color: rgb(214, 167, 216);
+  /* position: relative; */
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 15px;
+  /* background-color: rgb(68, 68, 75, 0.95); */
+  /* background-color: darkorchid; */
+}
+/* .main_body {
+  overflow: scroll;
+} */
+.header_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header_list ul {
+  display: flex;
+  flex-direction: row;
+}
+.header_list li {
+  margin-left: 20px;
+  list-style: none;
+}
+.header_list li > a {
+  /* line-height: 2.85; */
+  /* font-family: "CLEANVEB"; */
+
+  /* font-family: "DeutschGothic"; */
+  /* font-family: "Gagalin"; */
+  /* font-family: "beerMoney"; */
+  line-height: 43px;
+  font-family: "MuseoSansCyrl";
+  font-size: 19px;
+  /* font-family: "CLEANVEL";
+  font-weight: bold; */
+}
+
+.header_logo {
+  display: flex;
+  flex-direction: row;
+  /* width: 50px; */
+}
+
+.header_logo_img img {
+  /* width: 10%; */
+  background-color: rgb(201, 169, 159);
+  border-radius: 50%;
+  width: 51px;
+}
+.header a {
+  color: rgb(206, 143, 206);
+  text-decoration: none;
+}
+.header li > a {
+  margin-left: 10px;
+  transition: 0.3s all linear;
+}
+.header a.Picked {
+  color: rgb(240, 227, 240);
+}
+.header li > a:hover {
+  background-color: rgb(240, 227, 240);
+  color: rgb(40, 40, 43);
+  border-radius: 2%;
+  color: rgb(206, 143, 206);
+  background-color: rgb(206, 143, 206);
+  color: rgb(240, 227, 240);
+}
+.header_logo_text:hover {
+  color: rgb(240, 227, 240);
+}
+.header_logo_text {
+  margin-left: 20px;
+  display: block;
+  width: 70%;
+  height: 20px;
+  /* line-height: 2.35; */
+  /* font-family: "CLEANVEB"; */
+  /* font-family: "CLEANVEL"; */
+  /* font-family: "DeutschGothic"; */
+  /* font-family: "Gagalin"; */
+  line-height: 43px;
+  font-family: "beerMoney";
+  font-weight: normal;
+
+  /* font-family: "MuseoSansCyrl"; */
+  font-size: 26px;
+  transition: 0.3s all linear;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../icon/arrow-left-square.svg");
+}
+.carousel-control-next-icon {
+  background-image: url("../icon/arrow-right-square.svg");
+}
+
+.pickLogoText {
+  height: 80%;
+}
+.row .card img {
+  transform: scale(0.7);
+}
+
+.row .card {
+  margin: 0 auto;
+}
+.row .card {
+  background-color: rgb(125, 146, 146);
+  margin-bottom: 15px;
+}
+
+.changeTheme {
+  display: block;
+  /* line-height: 2.2; */
+  margin-top: 4px;
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-color: rgb(203, 176, 228);
+  border-radius: 10%;
+  background-image: url("https://img.icons8.com/ios/100/000000/day-and-night.png");
+  /* background-image: url("https://cdn-icons-png.flaticon.com/512/5115/5115349.png"); */
+}
+
+/*#endregion HEADER*/
+
+.main_body {
+  background-color: rgb(254, 255, 239);
+}
+.category_article {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  /* line-height: 2.35; */
+  /* font-family: "CLEANVEB"; */
+  /* font-family: "CLEANVEL"; */
+  font-weight: bold;
+  font-family: "DeutschGothic";
+  /* font-family: "Gagalin"; */
+  /* font-family: "beerMoney"; */
+  color: rgb(240, 234, 234);
+}
+.main_article {
+  height: 100%;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around; */
+}
+.article_background {
+  display: block;
+
+  overflow: hidden;
+  height: 380px;
+
+  /* cursor: pointer; */
+  /* transition: 0.3s all linear; */
+}
+.article_background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* border-radius: 15%; */
+}
+
+.article_desc p {
+  padding: 30px 45px;
+  font-size: 20px;
+  /* line-height: 2.35; */
+  /* font-family: "CLEANVEB"; */
+  /* font-family: "CLEANVEL"; */
+  font-weight: bold;
+  font-family: "CLEANVEL";
+  color: rgb(43, 42, 44);
+  text-align: justify;
+}
+.article_desc span:before {
+  content: "\269B";
+  display: block;
+  margin-left: 20px;
+}
+
+.article_element_name {
+  position: absolute;
+  margin-top: -50px;
+  color: rgb(255, 255, 255);
+
+  font-size: 24px;
+  font-family: "CLEANVEB";
+
+  padding-left: 10%;
+  font-weight: bold;
+}
+.article_element_date {
+  display: block;
+  font-size: 20px;
+  margin-top: -80px;
+}
+.main_article h2 {
+  padding: 12px 65px;
+  font-size: 26px;
+  /* line-height: 2.35; */
+  /* font-family: "CLEANVEB"; */
+  /* font-family: "CLEANVEL"; */
+  font-weight: bold;
+  font-family: "CLEANVEL";
+  color: rgb(43, 42, 44);
+  text-align: justify;
+}
+/*#region SLIDER*/
+/* Слайдер */
+.slick-slider {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+  margin-right: 45px;
+  margin-left: 45px;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  /* margin-left: 45px;  */
+  margin-bottom: 20px;
+}
+/* Слайд */
+.slick-slide {
+  margin-right: 5px;
+}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+  margin-right: 5px;
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+  margin-right: 5px;
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+  margin-right: 5px;
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+  width: 22px;
+  height: 43px;
+  font-size: 0;
+  position: absolute;
+  z-index: 5;
+  top: 90px;
+  border: 0px;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  display: block;
+
+  /* background-image: url("../3rdTemplate/res/img/left_arow.png"); */
+  /* background-image: url("http://cdn.onlinewebfonts.com/svg/download_72240.png"); */
+  background: url("../img/left_arrow.svg") 0 0 / 100% no-repeat;
+  background-position: -10px 0px;
+  background-size: cover;
+
+  margin-left: 10px;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  /* background-image: url("../3rdTemplate/res/img/left_arow.png"); */
+  /* background-image: url("http://cdn.onlinewebfonts.com/svg/download_72240.png"); */
+  background: url("../img/right_arrow.svg") 0 0 / 100% no-repeat;
+  background-position: -10px 0px;
+  background-size: cover;
+  right: 0;
+  margin-right: 10px;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+
+.article_slider img {
+  width: 320px;
+  height: 230px;
+}
+
+/*#endregion SLIDER*/
+
+/*#region FOOTER*/
+.footer {
+  height: 33%;
+  background-color: rgb(63, 47, 70);
+}
+.footer_body {
+  display: block;
+  margin: 0px auto;
+}
+.wrapper_socialMedia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding: 0 20%; */
+  margin: 35px auto;
+}
+.socialMedia_element {
+  display: block;
+  margin-right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: rgb(105, 89, 101);
+  opacity: 0.8;
+  transition: 0.15s all linear;
+}
+.socialMedia_element img {
+  display: block;
+  margin: 7px auto;
+  /* border-radius: 15%; */
+  /* width: 35px;
+  height: 35px; */
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+}
+.socialMedia_element:hover {
+  background-color: rgb(206, 143, 206);
+  opacity: 0.95;
+}
+.fotter_rights {
+  text-align: center;
+  color: rgb(206, 143, 206);
+  line-height: 20px;
+  font-family: "MuseoSansCyrl";
+  font-size: 15px;
+}
+.fotter_rights span {
+  text-align: center;
+  color: rgb(221, 214, 221);
+  font-family: "beerMoney";
+}
+
+.footer_separate {
+  background-color: blue;
+  margin-bottom: 8px;
+}
+/*#endregion FOOTER*/
+
+/*#region MediaQuery*/
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+    /* background-color: blueviolet; */
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    /* background-color: burlywood; */
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+    /* background-color: rgb(126, 150, 134); */
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .header_logo_text {
+    /* visibility: hidden; */
+    transform: scale(0);
+  }
+
+  .header_list {
+    /* position: absolute; */
+
+    position: fixed;
+    margin-top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 75);
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+  }
+  .header_list ul {
+    position: absolute;
+    flex-direction: column;
+    top: 80px;
+    left: 40px;
+  }
+  .header_logo_img img,
+  .header_logo_img {
+    /* display: block; */
+    position: relative;
+    z-index: 11;
+  }
+  .menu_burger {
+    margin-top: 7px;
+    margin-right: 20px;
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 29px;
+    z-index: 10;
+    /* background-color: chartreuse; */
+  }
+  .menu_burger span {
+    display: block;
+    position: absolute;
+    /* z-index: 3; */
+    top: 13px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(203, 176, 228);
+    transition: all 0.3s ease 0s;
+  }
+  .menu_burger:before,
+  .menu_burger:after {
+    display: block;
+    content: "";
+    position: absolute;
+    /* z-index: 3; */
+    /* top: 9px; */
+    width: 100%;
+    height: 3px;
+    background-color: rgb(203, 176, 228);
+    transition: all 0.3s ease 0s;
+  }
+  .menu_burger.active span {
+    transform: scale(0);
+  }
+  .menu_burger:before {
+    top: 0px;
+  }
+  .menu_burger:after {
+    bottom: 0px;
+  }
+
+  .menu_burger.active:before {
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .menu_burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 13px;
+  }
+
+  .header_list.active {
+    margin-top: 0px;
+    top: 0;
+    height: 850px;
+    overflow: unset;
+  }
+
+  .main_body {
+    z-index: 1;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper_socialMedia {
+    margin: 15px auto;
+  }
+  .footer {
+    height: 25%;
+  }
+  .socialMedia_element {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}
+/*#endregion MediaQuery*/
